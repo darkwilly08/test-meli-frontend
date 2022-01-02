@@ -1,0 +1,40 @@
+@import '../constants/index'
+
+$xs: map-get($spaces, "xs")
+$sm: map-get($spaces, "sm")
+$md: map-get($spaces, "md")
+
+.product
+    .img-container
+        width:40%
+        max-width:180px
+        text-align: center
+        >img
+            object-fit: contain
+            max-width:100%
+            height:180px
+
+    .price
+        display: flex
+        font-size: 24px
+    .shipping-icon
+        display: flex
+        margin-left: $xs
+        margin-top: 3px
+        >img
+            margin: auto
+    @media screen and (max-width: $small)
+        .title
+            font-size: 16px
+            margin-top: $sm
+    @media screen and (min-width: $small)
+        .title
+            font-size: 18px
+            margin-top: $md
+
+    .location
+        font-size: 12px
+        @media screen and (max-width: $small)
+            text-align: end
+
+    

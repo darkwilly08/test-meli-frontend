@@ -1,0 +1,74 @@
+@import '../constants/index'
+
+$xs: map-get($spaces, "xs")
+$sm: map-get($spaces, "sm")
+$md: map-get($spaces, "md")
+$lg: map-get($spaces, "lg")
+
+.buy-btn
+    background-color: $secondary
+    width: 100%
+
+.product-info
+    display: flex
+    background-color: #fff
+    .left
+        width: 680px
+    .right
+        padding-top: $md
+        padding-right: $md
+        padding-left: $md
+        flex: 1
+        >div
+            float: right
+            max-width: 400px
+    .img-container
+        max-width:680px
+        text-align: center
+        padding: $xs
+        >img
+            object-fit: contain
+            max-width:100%
+            height: 680px
+
+    .condition
+        font-size: 14px
+        display: flex
+    .shipping-icon
+        display: flex
+        margin-left: $xs
+        >img
+            margin: auto
+
+    .price
+        font-size: 46px
+    @media screen and (max-width: $small)
+        .title
+            font-size: 16px
+    @media screen and (min-width: $small)
+        .title
+            font-size: 24px
+    .desc-section
+        margin-top: $lg
+        margin-left: $md
+        text-align: start
+        .title
+            font-size: 28px
+        .text
+            font-size: 16px
+
+@media screen and (max-width:$medium)
+  .product-info 
+    flex-wrap: wrap
+    .left 
+        flex-basis: 100%
+    .right
+        padding: $sm
+        >div
+            float: none
+            text-align: end
+            max-width: 100%
+    .img-container
+        >img
+            height: auto
+
