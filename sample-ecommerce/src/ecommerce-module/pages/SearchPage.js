@@ -21,7 +21,6 @@ function SearchPage() {
   const handleProductClicked = (productId) => {
     navigate(`/items/${productId}`);
   };
-  // i18n.changeLanguage('en');
 
   const dispatch = useDispatch();
   const { products, status, categories } = useSelector(
